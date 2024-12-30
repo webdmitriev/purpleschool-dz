@@ -14,3 +14,16 @@ let residual = (array.max() != nil && array.min() != nil ? array.max()! - array.
  */
 print(residual != nil ? "Разность наибольшего и наименьшего элементов массива: \(residual!)" : "Массив пустой, невозможно вычислить разность.")
 // Вместо пустой строки напишите ваше решение.
+
+
+var numbers: [Int] = []
+for i in stride(from: 1, to: 11, by: 1) {
+    numbers.append(i)
+}
+print(numbers)
+
+for i in 1...10 {
+    numbers.append(i)
+}
+print(numbers)
+

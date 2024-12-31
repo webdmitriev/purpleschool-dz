@@ -36,3 +36,19 @@ let arr = ["Для", "проверки", "вашего", "решения", "за
 print(!arr.isEmpty ? arr[arr.count - 2] : "Пусто")
 
 
+// Callback
+func greeting(before: () -> Void, for names: [String], completion: (Int) -> Void) {
+    before()
+    for name in names {
+        print("Hello, \(name)!")
+    }
+    completion(names.count)
+}
+let names = ["Oleg", "Dmitriev", "Mary"]
+
+greeting(before: {
+    print("Hello all!")
+}, for: names) {
+    print("\($0) users!")
+}
+

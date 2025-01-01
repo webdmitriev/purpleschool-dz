@@ -23,3 +23,9 @@ do {
 } catch AgeError.tooYoung {
     print("Too young")
 }
+
+
+
+//
+let values: [Any] = [1, 2, 0.86, "Hello", true]
+values.forEach { print(type(of: $0)) }

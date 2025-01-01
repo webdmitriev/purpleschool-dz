@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
                                 <connections>
-                                    <action selector="actionPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xx3-be-W5f"/>
+                                    <action selector="plusButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzp-y0-Xjd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kld-Qj-rhK">
@@ -39,7 +39,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
                                 <connections>
-                                    <action selector="actionMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBG-7l-prf"/>
+                                    <action selector="minusButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0YY-Ll-IJM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,7 +47,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="number" destination="Kld-Qj-rhK" id="flj-ci-QRZ"/>
+                        <outlet property="counterLabel" destination="Kld-Qj-rhK" id="yPr-Be-spR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

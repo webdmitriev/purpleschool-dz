@@ -9,26 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var number: UILabel!
-
+    @IBOutlet weak var counterLabel: UILabel!
+    private var counterNumber: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.number.textColor = .systemGray
-        self.number.font = .systemFont(ofSize: 32, weight: .bold)
-        // Do any additional setup after loading the view.
+        self.counterLabel.text = "\(self.counterNumber)"
+        self.counterLabel.textColor = .systemGray
+        self.counterLabel.font = .systemFont(ofSize: 32, weight: .bold)
     }
 
-    @IBAction func actionMinus(_ sender: Any) {
-        guard let num = self.number.text else { return }
-        
-        if Int(num)! <= 0 { return }
-        
-        self.number.text = "\(Int(num)! - 1)"
+    @IBAction func minusButtonDidTap(_ sender: Any) {
+        if self.counterNumber <= 0 { return }
+        self.counterNumber = self.counterNumber - 1
+        changeCounterLabel(self.counterNumber)
     }
-    @IBAction func actionPlus(_ sender: Any) {
-        guard let num = self.number.text else { return }
-        
-        self.number.text = "\(Int(num)! + 1)"
+    
+    @IBAction func plusButtonDidTap(_ sender: Any) {
+        self.counterNumber = self.counterNumber + 1
+        changeCounterLabel(self.counterNumber)
+    }
+    
+    private func changeCounterLabel(_ num: Int) {
+        self.counterLabel.text = "\(num)"
     }
     
 }
